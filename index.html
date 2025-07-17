@@ -119,7 +119,7 @@
             init: function () {
                 S.Drawing.init('.canvas');
                 document.body.classList.add('body--ready');
-                S.UI.simulate("Vợ|Biết|Gì|chưa|#countdown 3|Tròn |9| tháng| Mình |Quen| nhau| Rồi |đấy| Bgio | beo |chỉ |mún | nói| là| beo |iuuu |emmm|#time|❤️");
+                S.UI.simulate("Vợ|Biết|Gì|Chưa|#countdown 3|Tròn|9|Tháng|Mình|Quen|Nhau|Rồi|Đấy|Bgio|Beo|Chỉ|Mún|Nói|Là| Beo |Iuuu |Emmm|#time|❤️");
                 S.Drawing.loop(function () {
                     S.Shape.render();
                 });
@@ -175,7 +175,7 @@
             var interval,
                 currentAction,
                 time,
-                maxShapeSize = 20,
+                maxShapeSize = 30,
                 sequence = [],
                 cmd = '#';
             function formatTime(date) {
@@ -380,7 +380,7 @@
             var gap = 13,
                 shapeCanvas = document.createElement('canvas'),
                 shapeContext = shapeCanvas.getContext('2d'),
-                fontSize = 300,
+                fontSize = 400,
                 fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
             function fit() {
                 shapeCanvas.width = Math.floor(window.innerWidth / gap) * gap;
