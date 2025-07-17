@@ -1,8 +1,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cuoi len di</title>
-        <link rel="Shortcut Icon" href="https://i.pinimg.com/236x/a5/20/de/a520deb545fea9b62776e6bea5d77928.jpg" type="image/x-icon" />
+        <title>Ki niem cua hai ta</title>
+        <link rel="Shortcut Icon" href="iuem.jpg" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
@@ -91,7 +91,7 @@
         <img src="iuem.jpg" id="logo">
     </div>
     <canvas class="canvas" width="1820" height="905"></canvas>
-    <p class="text" style="color: #ed3073;">Đã đươc
+    <p class="text" style="color: #ff8eb6;">Đã đươc
     <span id="span_dt_dt"></span><br> quen nhau rùi đấy😘
     </p>
     <script language="javascript">
@@ -119,7 +119,7 @@
             init: function () {
                 S.Drawing.init('.canvas');
                 document.body.classList.add('body--ready');
-                S.UI.simulate("Vợ|Biết|Gì|Chưa|#countdown 3|Tròn|9|Tháng|Mình|Quen|Nhau|Rồi|Đấy|Bgio|Beo|Chỉ|Mún|Nói|Là| Beo |Iuuu |Emmm|#time|❤️");
+                S.UI.simulate("Chào Vợ|Vợ|Biết|Gì|Chưa|#countdown 3|Tròn|9|Tháng|Mình|Quen|Nhau|Rồi|Đấy|Bgio|Beo|Chỉ|Mún|Nói|Là| Beo |Iuuu |Emmm|#time|❤️");
                 S.Drawing.loop(function () {
                     S.Shape.render();
                 });
@@ -165,7 +165,7 @@
                 drawCircle: function (p, c) {
                     context.fillStyle = c.render();
                     context.beginPath();
-                    context.arc(p.x, p.y, p.z, 0, 2 * Math.PI, true);
+                    context.arc(p.x, p.y, 1.5, 0, 2 * Math.PI, true);
                     context.closePath();
                     context.fill();
                 }
@@ -287,7 +287,7 @@
             this.p = new S.Point({
                 x: x,
                 y: y,
-                z: 5,
+                z: 0.5,
                 a: 1,
                 h: 0
             });
@@ -377,10 +377,10 @@
             }
         };
         S.ShapeBuilder = (function () {
-            var gap = 13,
+            var gap = 5,
                 shapeCanvas = document.createElement('canvas'),
                 shapeContext = shapeCanvas.getContext('2d'),
-                fontSize = 400,
+                fontSize = 200,
                 fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
             function fit() {
                 shapeCanvas.width = Math.floor(window.innerWidth / gap) * gap;
