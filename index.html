@@ -5,7 +5,6 @@
         <link rel="Shortcut Icon" href="iuem.jpg" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
         <style>
             html {
                 height: 100%;
@@ -23,11 +22,12 @@
                 color: #ebf7f4;
             }
             .body--ready {
-                background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-                background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-                background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-                background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-                background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+                background: -webkit-linear-gradient(top, rgba(169, 241, 205, 0.766) 0%, rgb(247, 157, 255) 120%);
+                background: -moz-linear-gradient(top, rgba(169, 241, 205, 0.766
+                ) 0%, rgb(247, 157, 255) 120%);
+                background: -o-linear-gradient(top, rgb(169, 241, 205) 0%, rgb(247, 157, 255) 120%);
+                background: -ms-linear-gradient(top, rgb(169, 241, 205) 0%, rgb(247, 157, 255) 120%);
+                background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(247, 157, 255) 120%);
             }
             .text {
                 position: fixed;
@@ -38,13 +38,14 @@
             .canvas {
                 margin: 0 auto;
                 display: block;
+                color: #ff9bfd;
             }
             img#logo {
                 width: 128px;
                 background-size: cover;
                 border-radius: 200px;
-                box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
-                border: 3px solid #00a0ff;
+                box-shadow: 0px 0px 40px rgba(255, 168, 243, 0.879);
+                border: 3px solid #ff9bfd;
                 opacity: 1;
                 margin: 0 auto;
                 margin-top: 20px;
@@ -91,7 +92,7 @@
         <img src="iuem.jpg" id="logo">
     </div>
     <canvas class="canvas" width="1820" height="905"></canvas>
-    <p class="text" style="color: #ff8eb6;">Đã đươc
+    <p class="text" style="color: #fff1fd;">Đã đươc
     <span id="span_dt_dt"></span><br> quen nhau rùi đấy😘
     </p>
     <script language="javascript">
@@ -165,7 +166,7 @@
                 drawCircle: function (p, c) {
                     context.fillStyle = c.render();
                     context.beginPath();
-                    context.arc(p.x, p.y, 1.5, 0, 2 * Math.PI, true);
+                    context.arc(p.x, p.y, 1.25, 0, 2 * Math.PI, true);
                     context.closePath();
                     context.fill();
                 }
@@ -287,7 +288,7 @@
             this.p = new S.Point({
                 x: x,
                 y: y,
-                z: 0.5,
+                z: 0.25,
                 a: 1,
                 h: 0
             });
@@ -377,7 +378,7 @@
             }
         };
         S.ShapeBuilder = (function () {
-            var gap = 5,
+            var gap = 4,
                 shapeCanvas = document.createElement('canvas'),
                 shapeContext = shapeCanvas.getContext('2d'),
                 fontSize = 200,
